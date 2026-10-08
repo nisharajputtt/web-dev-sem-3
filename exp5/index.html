@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Product Management</h2>
+
+<input id="name" placeholder="Product Name">
+<input id="price" placeholder="Price">
+<input id="category" placeholder="Category">
+
+<button onclick="addProduct()">Add Product</button>
+<button onclick="showProducts()">Show Products</button>
+
+<h3>Products</h3>
+<div id="data"></div>
+
+<script>
+
+async function addProduct() {
+
+    let product = {
+        name: document.getElementById("name").value,
+        price: document.getElementById("price").value,
+        category: document.getElementById("category").value
+    };
+
+    await fetch("/products", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(product)
+    });
+
+    alert("Product Added");
+}
+
+
+async function showProducts() {
+
+    let response = await fetch("/products");
+    let products = await response.json();
+
+    let output = "";
+
+    products.forEach((p, i) => {
+
+        output += (i + 1) + ". " + p.name +
+            " - ₹" + p.price +
+            " - " + p.category + "<br>";
+
+    });
+
+    document.getElementById("data").innerHTML = output;
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Library Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>📚 Library Management System</h1>
+        <p>Manage your books easily</p>
+    </header>
+
+    <main>
+
+        <!-- Add / Update Book -->
+        <section class="form-section">
+
+            <h2 id="formTitle">Add New Book</h2>
+
+            <form id="bookForm">
+
+                <input
+                    type="text"
+                    id="title"
+                    placeholder="Enter book title"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="author"
+                    placeholder="Enter author name"
+                    required
+                >
+
+                <input
+                    type="number"
+                    id="year"
+                    placeholder="Publication year"
+                    required
+                >
+
+                <button type="submit" id="submitBtn">
+                    Add Book
+                </button>
+
+                <button
+                    type="button"
+                    id="cancelBtn"
+                    class="cancel-btn"
+                    onclick="cancelEdit()"
+                >
+                    Cancel
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- Books -->
+        <section class="books-section">
+
+            <div class="section-heading">
+                <h2>📖 Available Books</h2>
+
+                <button onclick="loadBooks()" class="refresh-btn">
+                    🔄 Refresh
+                </button>
+            </div>
+
+            <div id="message"></div>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Book Title</th>
+                            <th>Author</th>
+                            <th>Year</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="bookList">
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Library Management System | Node.js + Express.js</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
