@@ -6,7 +6,7 @@ app.use(express.json());
 let students = [
     {
         id: 1,
-        name: "Nisha",
+        name: "Nisha Rajput",
         branch: "CSE"
     },
     {
