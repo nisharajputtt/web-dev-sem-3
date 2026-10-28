@@ -4,7 +4,7 @@ app.use(express.json());
 
 let students = [
   { id: 1, name: 'Rahul', branch: 'CSE', age: 20 },
-  { id: 2, name: 'Aman', branch: 'IT', age: 21 },
+  { id: 2, name: 'Rishi', branch: 'IT', age: 21 },
   { id: 3, name: 'Priya', branch: 'CSE', age: 20 },
   { id: 4, name: 'Nisha', branch: 'ECE', age: 21 }
 ];
