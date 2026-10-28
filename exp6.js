@@ -2,8 +2,8 @@ const express = require('express');
 const app = express();
 app.use(express.json());
 let students = [
-    { id: 1, name: "Rahul", branch: "Cse" },
-    {id: 2, name: "Aman", branch: "IT" }
+    { id: 1, name: "NISHA", branch: "Cse" },
+    {id: 2, name: "PALAK", branch: "IT" }
 ];
 app.get('/', (req, res) => {
     res.send("Server is running");
