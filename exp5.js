@@ -2,10 +2,10 @@ const express = require('express');
 const app = express();
 
 let students = [
-  { id: 1, name: 'Rahul', branch: 'CSE', age: 20 },
-  { id: 2, name: 'Aman', branch: 'IT', age: 21 },
-  { id: 3, name: 'Priya', branch: 'CSE', age: 20 },
-  { id: 4, name: 'Neha', branch: 'ECE', age: 21 }
+  { id: 1, name: 'NISHA', branch: 'CSE', age: 20 },
+  { id: 2, name: 'PALAK', branch: 'IT', age: 21 },
+  { id: 3, name: 'PRIYA', branch: 'CSE', age: 20 },
+  { id: 4, name: 'NEHA', branch: 'ECE', age: 21 }
 ];
 
 app.get('/students', (req, res) => {
