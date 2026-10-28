@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+ <title>Library Management System</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Library Management System</h1>
+
+        <p>Manage Your books Easily</p>
+
+    </header>
+
+
+    <main>
+
+        <!-- Add Book -->
+
+        <section class="form-box">
+
+            <h2 id="heading">Add New Book</h2>
+
+            <form id="bookForm">
+
+                <input
+                    type="text"
+                    id="title"
+                    placeholder="Book Title"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="author"
+                    placeholder="Author Name"
+                    required
+                >
+
+                <input
+                    type="number"
+                    id="year"
+                    placeholder="Publication Year"
+                    required
+                >
+
+                <button type="submit" id="submitBtn">
+                    Add Book
+                </button>
+
+                <button
+                    type="button"
+                    id="cancelBtn"
+                    onclick="cancelEdit()">
+
+                    Cancel
+
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- Books -->
+
+        <section class="books-box">
+
+            <div class="top">
+
+                <h2>📖 Available Books</h2>
+
+                <button onclick="loadBooks()">
+                    Refresh
+                </button>
+
+            </div>
+
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>ID</th>
+
+                        <th>Title</th>
+
+                        <th>Author</th>
+
+                        <th>Year</th>
+
+                        <th>Actions</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="bookList">
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        Library Management System
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
